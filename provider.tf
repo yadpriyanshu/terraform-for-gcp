@@ -11,6 +11,6 @@ terraform {
 
 # Terraform provider block
 provider "google" {
-  project = "priyanshu-sandbox"
+  project = "PROJECT_ID"
   region  = "us-central1"
 }
