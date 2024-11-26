@@ -11,6 +11,6 @@ terraform {
 
 # Terraform provider block
 provider "google" {
-  project = "PROJECT_ID"
-  region  = "us-central1"
+  project = var.gcp_project
+  region  = var.region
 }

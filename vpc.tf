@@ -7,7 +7,7 @@ resource "google_compute_network" "sandbox_vpc" {
 
 resource "google_compute_subnetwork" "sandbox_subnet" {
   name          = "us-central1-subnet"
-  region        = "us-central1"
+  region        = var.region
   ip_cidr_range = "10.128.0.0/20"
   network       = google_compute_network.sandbox_vpc.id
 }

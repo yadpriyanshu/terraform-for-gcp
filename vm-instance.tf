@@ -1,7 +1,7 @@
 resource "google_compute_instance" "myapp1" {
   name         = "myapp1"
-  machine_type = "e2-micro"
-  zone         = "us-central1-a"
+  machine_type = var.machine_type
+  zone         = var.zone
   #tags = [ "ssh-tag","webserver-tag" ]
   tags = [tolist(google_compute_firewall.fw_http.target_tags)[0], tolist(google_compute_firewall.fw_ssh.target_tags)[0]]
   boot_disk {
